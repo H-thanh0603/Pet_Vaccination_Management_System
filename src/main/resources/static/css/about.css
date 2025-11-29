@@ -1,0 +1,300 @@
+/* =========================================================
+   1. CẤU HÌNH CHUNG & TYPOGRAPHY
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+}
+
+/* =========================================================
+   2. ABOUT SECTION (PHẦN GIỚI THIỆU - NỀN XANH)
+   ========================================================= */
+.about-section {
+    padding: 100px 0;
+    /* Đổ màu gradient từ Xanh Ngọc sang Xanh Đậm */
+    background: linear-gradient(to right, #00bfa5, #008f7a);
+    color: #ffffff; 
+    position: relative;
+    overflow: hidden;
+}
+
+/* Typography cho About */
+.sub-title {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 3px;
+    opacity: 0.9;
+}
+
+.main-title {
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.about-desc {
+    color: #e0f2f1;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* Ảnh & Hiệu ứng ảnh */
+.about-img-wrapper {
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+.about-img-main {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); 
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.about-img-small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 220px;
+    height: 220px;
+    border-radius: 15px;
+    border: 8px solid #ffffff;
+    object-fit: cover;
+    z-index: 2;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Danh sách điểm mạnh (Icon Box) */
+.about-features .d-flex {
+    margin-bottom: 20px;
+}
+
+.icon-box-small {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2); /* Glassmorphism */
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.d-flex:hover .icon-box-small {
+    background-color: #ffffff;
+    color: #008f7a;
+    transform: rotate(360deg);
+}
+
+.about-features h5 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.about-features p {
+    color: #e0f2f1;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Nút bấm (Booking Button) */
+.btn-booking {
+    background-color: #ffffff; 
+    color: #00bfa5 !important; 
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    border: 2px solid transparent;
+}
+
+.btn-booking:hover {
+    background-color: transparent;
+    color: #ffffff !important;
+    border: 2px solid #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* =========================================================
+   3. TEAM SECTION (ĐỘI NGŨ BÁC SĨ)
+   ========================================================= */
+.team-section {
+    padding: 80px 0;
+    background-color: #111111; /* Nền đen */
+    color: #ffffff;
+}
+
+.team-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.team-desc {
+    color: #cccccc;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.team-subtitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Thẻ Bác Sĩ (Doctor Card) */
+.doctor-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    height: 100%;
+    padding-bottom: 20px;
+    /* transition: transform 0.3s ease; -> Đã bỏ để thẻ đứng yên theo yêu cầu */
+}
+
+/* Khung ảnh bác sĩ */
+.doctor-img-box {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.doctor-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+/* Thông tin bác sĩ */
+.doctor-info h4 {
+    color: #111;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.doctor-info span {
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* =========================================================
+   4. CARE SECTION (CHĂM SÓC SỨC KHỎE TOÀN DIỆN)
+   ========================================================= */
+.care-section {
+    background-color: #2e2618; /* Màu nâu đậm */
+    padding: 80px 0;
+    color: #e0e0e0;
+}
+
+.care-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #dedede;
+    margin-bottom: 40px;
+}
+
+/* Danh sách Menu bên trái */
+.care-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.care-item {
+    padding: 12px 0 12px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #b0b0b0;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.care-item:hover {
+    color: #fff;
+}
+
+/* Trạng thái đang chọn (Active) */
+.care-item.active {
+    color: #e86c6c; /* Màu hồng cam */
+    border-left: 3px solid #e86c6c;
+    font-weight: 500;
+}
+
+/* Hộp nội dung bên phải */
+.care-content-box {
+    background-color: #1a1d21;
+    padding: 40px;
+    border-radius: 15px;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #cccccc;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    min-height: 250px;
+}
+
+.care-content-box p {
+    margin-bottom: 20px;
+}
+
+.care-content-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- XỬ LÝ TAB & ANIMATION --- */
+/* Mặc định ẩn nội dung tab */
+.tab-content {
+    display: none;
+}
+
+/* Class hiện nội dung */
+.active-content {
+    display: block;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Hiệu ứng hiện dần */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

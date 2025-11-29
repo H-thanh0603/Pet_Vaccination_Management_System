@@ -13,16 +13,16 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+            // 1. Cấu hình quyền truy cập
             .authorizeHttpRequests((requests) -> requests
-                // Cho phép ai cũng được truy cập vào trang chủ ("/") và các file tĩnh (css, js, ảnh)
-                .requestMatchers("/", "/home", "/css/**", "/js/**", "/images/**", "/webjars/**", "/video/**", "/pictures/**").permitAll()
-                // Các trang khác (sau này làm admin) thì bắt buộc đăng nhập
-                .anyRequest().authenticated()
+                // Cho phép TẤT CẢ các request truy cập mà không cần đăng nhập
+                .anyRequest().permitAll() 
             )
-            .formLogin((form) -> form
-                .permitAll() // Cho phép dùng form đăng nhập mặc định
-            )
-            .logout((logout) -> logout.permitAll());
+            
+            // 2. Tắt các tính năng bảo vệ mặc định (để dev cho dễ)
+            .csrf(csrf -> csrf.disable()) // Tắt chống giả mạo request
+            .formLogin(form -> form.disable()) // Tắt form đăng nhập mặc định
+            .logout(logout -> logout.disable()); // Tắt chức năng đăng xuất
 
         return http.build();
     }
