@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layout}">
+
+<head>
+    <title>Quản trị hệ thống - Animal Doctors</title>
+</head>
+
+<body>
+    <div layout:fragment="content">
+        <div class="bg-dark text-white py-4 mb-4">
+            <div class="container">
+                <h1 class="fw-bold"><i class="fas fa-tachometer-alt me-3"></i>Dashboard Quản Trị</h1>
+            </div>
+        </div>
+
+        <div class="container pb-5">
+            <div class="row g-4">
+                <!-- User Stats -->
+                <div class="col-md-4">
+                    <div class="card bg-primary text-white h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="card-title">Người dùng</h5>
+                                    <h2 class="display-4 fw-bold" th:text="${userCount}">0</h2>
+                                </div>
+                                <i class="fas fa-users fa-4x opacity-50"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Stats -->
+                <div class="col-md-4">
+                    <div class="card bg-success text-white h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="card-title">Sản phẩm</h5>
+                                    <h2 class="display-4 fw-bold" th:text="${productCount}">0</h2>
+                                </div>
+                                <i class="fas fa-box-open fa-4x opacity-50"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Stats -->
+                <div class="col-md-4">
+                    <div class="card bg-info text-white h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="card-title">Dịch vụ</h5>
+                                    <h2 class="display-4 fw-bold" th:text="${serviceCount}">0</h2>
+                                </div>
+                                <i class="fas fa-user-md fa-4x opacity-50"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0">Chức năng quản lý</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action disabled">
+                                    <i class="fas fa-users me-2"></i>Quản lý người dùng (Đang phát triển)
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action disabled">
+                                    <i class="fas fa-boxes me-2"></i>Quản lý sản phẩm (Đang phát triển)
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action disabled">
+                                    <i class="fas fa-calendar-check me-2"></i>Quản lý dịch vụ (Đang phát triển)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
